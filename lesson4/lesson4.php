@@ -64,11 +64,58 @@
 
     <?php
 
-    function divisible();
-    $x = 2;
-    $y = 3;
-    $z
+    // function divisible();
+    // $x = 2;
+    // $y = 3;
+    // $z
 
+    
+    // $sports = array('Real Madrid', 'Barcelona', 'Besiktas');
+
+    // array_unshift($sports, 'Arsenal');
+
+    // var_dump($sports);
+
+
+    ?>
+
+    <?php 
+
+    // $sports = array('Real Madrid', 'Barcelona', 'Besiktas');
+
+    // array_shift($sports);
+
+    // var_dump($sports);
+
+    ?>
+
+    <?php 
+
+    // $sports = array['Real Madrid', 'Barcelona', 'Besiktas', 'Arsenal', 'Chelsea'];
+
+    // $output1 = array_slice($sports, 2);
+    // $output2 = array_slice($sports, 3);
+    // $output3 = array_slice($sports, -2,1);
+
+    // var_dump($output1, $output2, $output3);
+
+    ?>
+
+    <?php 
+    
+    // $sports = [12,24,36,48];
+    // var_dump(array_sum($sports));
+    
+    ?>
+
+    <?php 
+    
+    $temperature = [25,30,25,26,20,28,25];
+
+    $average_temp = array_sum($temp)/7;
+
+    echo ($average_temp);
+    
     ?>
 </body>
 </html>
