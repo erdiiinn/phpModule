@@ -2,7 +2,7 @@
 
     <div class="signin">
 
-        <form action="register.php" method="post" class="form-signin d-flex flex-column justify-content-center align-items-center h-100" >
+        <form action="signupLogic.php" method="post" class="form-signin d-flex flex-column justify-content-center align-items-center h-100" >
              
             <h1 class="h33 mb-3 font-weight-normal"> Please sign up</h1>
 
