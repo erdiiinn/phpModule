@@ -63,10 +63,10 @@
     //     "Music" => '4',
     // )
 
-    $grade = ['Math'] = '3',
-    $grade = ['Art'] = '2',
-    $grade = ['History'] = '3',
-    $grade = ['Music'] = '4',
+    $grade = ['Math'] = '3';
+    $grade = ['Art'] = '2';
+    $grade = ['History'] = '3';
+    $grade = ['Music'] = '4';
 
     // echo = "Math grade is " .  $grade['Math'];
 

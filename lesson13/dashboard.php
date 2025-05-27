@@ -1,107 +1,19 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+<?php
+include_once "config.php";
+if(empty($_SESSION["username"])) {
+  header('Location:login.php');
+}
 
-	<style>
-		
-		table
-		{
-			border: 1px solid black;
-		}
+$sql = "SELECT * FROM users";
+$selectUsers = $conn -> prepare($sql);
+$selectUsers -> execute();
 
-		tr,td,th
-		{
-			border: 1px solid black;
-			
-		}
-		table,tr,td
-		{
-			border-collapse: collapse;
-		}
-		td
-		{
-			padding: 10px;
-		}
+$users_data = $selectUsers -> fetchAll();
+?>
 
-	</style>
-</head>
-<body>
-
-<nav class="navbar bg-body-tertiary">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
-    </a>
-
-	<a class="logout.php" href="#">
-      Logout
-    </a>
-  </div>
-</nav>
-
-
-	<?php 
-
-		include_once('config.php');
-
-		$getUsers = $conn->prepare("SELECT * FROM users");
-
-		$getUsers->execute();
-
-		$users = $getUsers->fetchAll();
-
-	 ?>
-
-
-	 <table>
-		<thead>
-			
-			<tr>
-				<th>ID</th>
-				<th>Username</th>
-				<th>Name</th>
-				<th>Surname</th>
-				<th>Email</th>
-				<th>Update</th>
-			</tr>
-	</thead>
-
-
-	 	<?php 
-
-	 		foreach ($users as $user ) {
-			
-		?>
-			<tr> 
-				<td> <?= $user['id'] ?> </td>
-				<td> <?= $user['username'] ?> </td>
-				<td> <?= $user['name']  ?> </td> 
-				<td> <?= $user['surname']  ?> </td> 
-				<td> <?= $user['email']  ?> </td>
-				<td> <?= "<a href='delete.php?id=$user[id]'> Delete</a>| <a href='edit.php?id=$user[id]'> Update </a>"?></td>
-
-			</tr>
-		
-		<?php 
-
-			}
-
-	 	 ?>
-
-
-
-	 </table>
-
-	 <a href="index.php">Add User</a>
-	
-</body>
-</html> -->
-
-<?php include("header.php"); ?>
+<?php include("header.php")?>
   <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Welcome</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Welcome <i> <?php $_SESSION["username"]; ?></i></a>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
         <a class="nav-link" href="logout.php">Sign out</a>
@@ -136,6 +48,4 @@
       </main>
     </div>
   </div>
-
-  <?php include("footer.php"); ?>
-
+  <?php include("footer.php")?>

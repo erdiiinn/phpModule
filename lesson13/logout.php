@@ -1,7 +1,7 @@
-<?php
+<?php 
+    include_once('config.php');
 
-include_once('config.php');
-session_destroy();
+    session_destroy();
 
-header('Locaion: login.php');
+    header('Location: login.php');
 ?>

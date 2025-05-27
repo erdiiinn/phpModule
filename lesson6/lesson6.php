@@ -12,7 +12,7 @@
 
 $myfiletext="ds.txt";
 
-$myfile=($myfiletext, 'r');
+$myfile=($myfiletext , 'r');
 
 $size=myfilesize($my_filename);
 
