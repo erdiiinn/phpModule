@@ -12,9 +12,6 @@
 
 $myfiletext="ds.txt";
 
-$myfile=($myfiletext , 'r');
-
-$size=myfilesize($my_filename);
 
 $myfiledata = fread($my_filename, $size);
 
