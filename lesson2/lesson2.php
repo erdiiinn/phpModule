@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,11 +33,11 @@
     $second_string = 'Filan Fisteku';
     echo str_word_count($second_string);
 
-    $third_string = 'Programming is not cool'
-    echo $str_replace('not' , 'very' , $third_string);
+    // $third_string = 'Programming is not cool'
+    // echo $str_replace('not' , 'very' , $third_string);
 
-    $fourth_string = 'Real Madrid';
+    // $fourth_string = 'Real Madrid';
     echo strrev($fourth_string);
     ?>
 </body>
-</html>
+</html> -->
